@@ -98,6 +98,7 @@ HOOK_DEFINE_INLINE(Handler_Waza_newGetFunc) {
         if (ACTIVATED_MOVE_HANDLERS[array_index(MOVES, "Sky Drop")]) Handlers_Move_SkyDrop(array);
         if (ACTIVATED_MOVE_HANDLERS[array_index(MOVES, "Bestow")]) Handlers_Move_Bestow(array);
         if (ACTIVATED_MOVE_HANDLERS[array_index(MOVES, "Rototiller")]) Handlers_Move_Rototiller(array);
+        if (ACTIVATED_MOVE_HANDLERS[array_index(MOVES, "Status Punch")]) Handlers_Move_StatusPunch(array);
 
         ctx->X[0] = (uint64_t)array;
     }
@@ -172,6 +173,7 @@ void exl_move_handlers_main() {
     SetActivatedMoveHandlers(array_index(MOVES, "Freezy Frost"));
     SetActivatedMoveHandlers(array_index(MOVES, "Sparkly Swirl"));
     SetActivatedMoveHandlers(array_index(MOVES, "Veevee Volley"));
+    SetActivatedMoveHandlers(array_index(MOVES, "Status Punch"));
 
     InstallActivatedMoveHooks();
 }

@@ -921,6 +921,7 @@ static constexpr const char *MOVES[] = {
     "Psychic Noise",
     "Upper Hand",
     "Malignant Chain",
+    "Status Punch",
 };
 
 const int MOVE_COUNT = sizeof(MOVES) / sizeof(MOVES[0]);
