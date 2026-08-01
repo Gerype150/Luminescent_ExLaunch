@@ -825,7 +825,7 @@ data = """
 824	Glacial Lance	Ice	Physical	5	130	100%	VIII
 825	Astral Barrage	Ghost	Special	5	120	100%	VIII
 826	Eerie Spell	Psychic	Special	5	80	100%	VIII
-827	Status Punch	Normal	Physical	18	50	100%	VIII
+827	Status Punch	Normal	Physical	18	70	100%	VIII
 """.strip()
 
 rows = [row.split('\t') for row in data.split('\n')]

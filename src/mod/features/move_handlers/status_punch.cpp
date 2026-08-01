@@ -64,7 +64,7 @@ void HandlerStatusPunchWazaParam(EventFactor::EventHandlerArgs::Object** args, u
         break;
 
     case Pml::WazaData::WazaSick::WAZASICK_NEMURI:
-        Common::RewriteEventVar(args, EventVar::Label::WAZA_TYPE, array_index(TYPES, "Flying") );
+        Common::RewriteEventVar(args, EventVar::Label::WAZA_TYPE, array_index(TYPES, "Psychic") );
         break;
 
     case Pml::WazaData::WazaSick::WAZASICK_KOORI:
@@ -77,10 +77,6 @@ void HandlerStatusPunchWazaParam(EventFactor::EventHandlerArgs::Object** args, u
 
     case Pml::WazaData::WazaSick::WAZASICK_DOKU:
         Common::RewriteEventVar(args, EventVar::Label::WAZA_TYPE, array_index(TYPES, "Poison") );
-        break;
-
-    case Pml::WazaData::WazaSick::WAZASICK_KONRAN:
-        Common::RewriteEventVar(args, EventVar::Label::WAZA_TYPE, array_index(TYPES, "Psychic") );
         break;
 
     case Pml::WazaData::WazaSick::WAZASICK_NOROI:
