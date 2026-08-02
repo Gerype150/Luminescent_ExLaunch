@@ -3,9 +3,12 @@
 #include "externals/Dpr/Battle/Logic/Common.h"
 #include "externals/Dpr/Battle/Logic/EventVar.h"
 #include "externals/Dpr/Battle/Logic/Handler/Waza.h"
+#include "externals/Dpr/Battle/Logic/FX32.h"
 #include "data/moves.h"
 #include "data/utils.h"
 #include "move_handlers.h"
+#include "data/types.h"
+#include "romdata/romdata.h"
 
 using namespace Dpr::Battle::Logic;
 
@@ -106,14 +109,14 @@ EventFactor::EventHandlerTable::Array* ADD_StatusPunch() {
     EventFactor::EventHandlerTable::Array* table = getExtraMoveHandlers()->HandlerTable_StatusPunch;
     if (table == nullptr) {
         table = CreateMoveEventHandlerTable(2);
-        table->m_Items[0] = CreateMoveEventHandler(EventID::WAZA_POWER, (Il2CppMethodPointer)&HandlerStatusPunchWazaPowerBase());
-        table->m_Items[1] = CreateMoveEventHandler(EventID::WAZA_PARAM, (Il2CppMethodPointer)&HandlerStatusPunchWazaParam());
+        table->m_Items[0] = CreateMoveEventHandler(EventID::WAZA_POWER, (Il2CppMethodPointer)&HandlerStatusPunchWazaPowerBase);
+        table->m_Items[1] = CreateMoveEventHandler(EventID::WAZA_PARAM, (Il2CppMethodPointer)&HandlerStatusPunchWazaParam);
         getExtraMoveHandlers()->HandlerTable_StatusPunch = table;
     }
     return table;
 }
 
 void Handlers_Move_StatusPunch(Handler::Waza::GET_FUNC_TABLE_ELEM::Array* getFuncTable) {
-    SetMoveFunctionTable(getFuncTable, getExtraMoveHandlers()->currentIndex, array_index(MOVES, "StatusPunch"), (Il2CppMethodPointer)&ADD_StatusPunch);
+    SetMoveFunctionTable(getFuncTable, getExtraMoveHandlers()->currentIndex, array_index(MOVES, "Status Punch"), (Il2CppMethodPointer)&ADD_StatusPunch);
     getExtraMoveHandlers()->currentIndex++;
 }
